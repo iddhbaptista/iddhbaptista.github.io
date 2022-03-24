@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <title>English</title>
+    <!-- Script -->
+    <script type="text/javascript">
+    const results = {
+    right: 0,
+    wrong: 0
+};
+function checkAnswer(index) {
+    const row = document.querySelector("#row-" + index);
+    const input = document.querySelector("#write-" + index);
+    const button = document.querySelector("#button-" + index);
+    const answerInput = document.querySelector("#answer-" + index);
+    const SIMBOLOS = ["?","!",",","."]
+    const clean = (x) => SIMBOLOS.reduce((sum, i) => sum.replaceAll(i,''),x.toLowerCase());
+    const answer = clean(answerInput.value);
+    const word = clean(input.value);
+    let cssInput = "";
+    if (word === answer) {
+        results.right += 1;
+        cssInput = "success";
+    } else {
+        results.wrong += 1;
+        cssInput = "danger";
+        answerInput.setAttribute("type", "text");
+        answerInput.setAttribute("disabled", "disabled");
+    }
+    button.setAttribute("disabled", "disabled");
+    input.setAttribute("disabled", "disabled");
+    input.classList.add(cssInput);
+    row.classList.add("alert-" + cssInput);
+    
+}
+    </script>
+
+<body>
+    <div class="container-fluid">
+        <form class="form-horizontal" autocomplete="off">
+            <!-- Words -->
+            <div id="row-0" class="form-group alert">
+    <label>Word: #0</label>
+    <audio controls>
+    <source id="sound-0" src="https://storage.soundoftext.com/7604b910-9a34-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-0" class="form-control" />
+    <button type="button" id="button-0" onclick="javascript:checkAnswer(0);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-0" value="spell" />
+</div><div id="row-1" class="form-group alert">
+    <label>Word: #1</label>
+    <audio controls>
+    <source id="sound-1" src="https://storage.soundoftext.com/ce6f7eb0-ca2b-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-1" class="form-control" />
+    <button type="button" id="button-1" onclick="javascript:checkAnswer(1);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-1" value="spelling" />
+</div><div id="row-2" class="form-group alert">
+    <label>Word: #2</label>
+    <audio controls>
+    <source id="sound-2" src="https://storage.soundoftext.com/eb5cef90-9d6b-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-2" class="form-control" />
+    <button type="button" id="button-2" onclick="javascript:checkAnswer(2);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-2" value="alphabet" />
+</div><div id="row-3" class="form-group alert">
+    <label>Word: #3</label>
+    <audio controls>
+    <source id="sound-3" src="https://storage.soundoftext.com/cd6fb190-974c-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-3" class="form-control" />
+    <button type="button" id="button-3" onclick="javascript:checkAnswer(3);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-3" value="letter" />
+</div><div id="row-4" class="form-group alert">
+    <label>Word: #4</label>
+    <audio controls>
+    <source id="sound-4" src="https://storage.soundoftext.com/1fde3cd0-9c7f-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-4" class="form-control" />
+    <button type="button" id="button-4" onclick="javascript:checkAnswer(4);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-4" value="consonant" />
+</div><div id="row-5" class="form-group alert">
+    <label>Word: #5</label>
+    <audio controls>
+    <source id="sound-5" src="https://storage.soundoftext.com/c0f78440-9a50-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-5" class="form-control" />
+    <button type="button" id="button-5" onclick="javascript:checkAnswer(5);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-5" value="vowel" />
+</div><div id="row-6" class="form-group alert">
+    <label>Word: #6</label>
+    <audio controls>
+    <source id="sound-6" src="https://storage.soundoftext.com/78baaae0-987f-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-6" class="form-control" />
+    <button type="button" id="button-6" onclick="javascript:checkAnswer(6);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-6" value="ceiling" />
+</div><div id="row-7" class="form-group alert">
+    <label>Word: #7</label>
+    <audio controls>
+    <source id="sound-7" src="https://storage.soundoftext.com/4daf2970-97b2-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-7" class="form-control" />
+    <button type="button" id="button-7" onclick="javascript:checkAnswer(7);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-7" value="city" />
+</div><div id="row-8" class="form-group alert">
+    <label>Word: #8</label>
+    <audio controls>
+    <source id="sound-8" src="https://storage.soundoftext.com/01f0f020-9cf5-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-8" class="form-control" />
+    <button type="button" id="button-8" onclick="javascript:checkAnswer(8);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-8" value="town" />
+</div><div id="row-9" class="form-group alert">
+    <label>Word: #9</label>
+    <audio controls>
+    <source id="sound-9" src="https://storage.soundoftext.com/3aaded40-a345-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-9" class="form-control" />
+    <button type="button" id="button-9" onclick="javascript:checkAnswer(9);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-9" value="village" />
+</div><div id="row-10" class="form-group alert">
+    <label>Word: #10</label>
+    <audio controls>
+    <source id="sound-10" src="https://storage.soundoftext.com/136031a0-97b8-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-10" class="form-control" />
+    <button type="button" id="button-10" onclick="javascript:checkAnswer(10);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-10" value="in front of" />
+</div><div id="row-11" class="form-group alert">
+    <label>Word: #11</label>
+    <audio controls>
+    <source id="sound-11" src="https://storage.soundoftext.com/9a1ca630-97ac-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-11" class="form-control" />
+    <button type="button" id="button-11" onclick="javascript:checkAnswer(11);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-11" value="behind" />
+</div><div id="row-12" class="form-group alert">
+    <label>Word: #12</label>
+    <audio controls>
+    <source id="sound-12" src="https://storage.soundoftext.com/d905fd50-980c-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-12" class="form-control" />
+    <button type="button" id="button-12" onclick="javascript:checkAnswer(12);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-12" value="man" />
+</div><div id="row-13" class="form-group alert">
+    <label>Word: #13</label>
+    <audio controls>
+    <source id="sound-13" src="https://storage.soundoftext.com/5a158370-9943-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-13" class="form-control" />
+    <button type="button" id="button-13" onclick="javascript:checkAnswer(13);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-13" value="men" />
+</div><div id="row-14" class="form-group alert">
+    <label>Word: #14</label>
+    <audio controls>
+    <source id="sound-14" src="https://storage.soundoftext.com/02e56e40-978f-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-14" class="form-control" />
+    <button type="button" id="button-14" onclick="javascript:checkAnswer(14);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-14" value="woman" />
+</div><div id="row-15" class="form-group alert">
+    <label>Word: #15</label>
+    <audio controls>
+    <source id="sound-15" src="https://storage.soundoftext.com/700b9d40-9943-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-15" class="form-control" />
+    <button type="button" id="button-15" onclick="javascript:checkAnswer(15);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-15" value="women" />
+</div><div id="row-16" class="form-group alert">
+    <label>Word: #16</label>
+    <audio controls>
+    <source id="sound-16" src="https://storage.soundoftext.com/de627310-a576-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-16" class="form-control" />
+    <button type="button" id="button-16" onclick="javascript:checkAnswer(16);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-16" value="studying" />
+</div><div id="row-17" class="form-group alert">
+    <label>Word: #17</label>
+    <audio controls>
+    <source id="sound-17" src="https://storage.soundoftext.com/9bd7f610-9841-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-17" class="form-control" />
+    <button type="button" id="button-17" onclick="javascript:checkAnswer(17);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-17" value="standing" />
+</div><div id="row-18" class="form-group alert">
+    <label>Word: #18</label>
+    <audio controls>
+    <source id="sound-18" src="https://storage.soundoftext.com/d63cf1f0-996f-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-18" class="form-control" />
+    <button type="button" id="button-18" onclick="javascript:checkAnswer(18);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-18" value="open" />
+</div><div id="row-19" class="form-group alert">
+    <label>Word: #19</label>
+    <audio controls>
+    <source id="sound-19" src="https://storage.soundoftext.com/dd754e60-9909-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-19" class="form-control" />
+    <button type="button" id="button-19" onclick="javascript:checkAnswer(19);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-19" value="closed" />
+</div><div id="row-20" class="form-group alert">
+    <label>Word: #20</label>
+    <audio controls>
+    <source id="sound-20" src="https://storage.soundoftext.com/761bbba0-9904-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-20" class="form-control" />
+    <button type="button" id="button-20" onclick="javascript:checkAnswer(20);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-20" value="intelligent" />
+</div><div id="row-21" class="form-group alert">
+    <label>Word: #21</label>
+    <audio controls>
+    <source id="sound-21" src="https://storage.soundoftext.com/6291e7a0-ab08-11ec-97ec-87db4a936aff.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-21" class="form-control" />
+    <button type="button" id="button-21" onclick="javascript:checkAnswer(21);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-21" value="eating pinapple" />
+</div><div id="row-22" class="form-group alert">
+    <label>Word: #22</label>
+    <audio controls>
+    <source id="sound-22" src="https://storage.soundoftext.com/62bf1220-ab08-11ec-97ec-87db4a936aff.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-22" class="form-control" />
+    <button type="button" id="button-22" onclick="javascript:checkAnswer(22);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-22" value="eating strawberry" />
+</div><div id="row-23" class="form-group alert">
+    <label>Word: #23</label>
+    <audio controls>
+    <source id="sound-23" src="https://storage.soundoftext.com/36e205a0-9767-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-23" class="form-control" />
+    <button type="button" id="button-23" onclick="javascript:checkAnswer(23);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-23" value="between" />
+</div><div id="row-24" class="form-group alert">
+    <label>Word: #24</label>
+    <audio controls>
+    <source id="sound-24" src="https://storage.soundoftext.com/54d22950-9771-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-24" class="form-control" />
+    <button type="button" id="button-24" onclick="javascript:checkAnswer(24);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-24" value="wearing" />
+</div><div id="row-25" class="form-group alert">
+    <label>Word: #25</label>
+    <audio controls>
+    <source id="sound-25" src="https://storage.soundoftext.com/bdd76f40-9781-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-25" class="form-control" />
+    <button type="button" id="button-25" onclick="javascript:checkAnswer(25);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-25" value="clothes" />
+</div><div id="row-26" class="form-group alert">
+    <label>Word: #26</label>
+    <audio controls>
+    <source id="sound-26" src="https://storage.soundoftext.com/4abb54b0-983d-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-26" class="form-control" />
+    <button type="button" id="button-26" onclick="javascript:checkAnswer(26);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-26" value="trousers" />
+</div><div id="row-27" class="form-group alert">
+    <label>Word: #27</label>
+    <audio controls>
+    <source id="sound-27" src="https://storage.soundoftext.com/3617ced0-9cac-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-27" class="form-control" />
+    <button type="button" id="button-27" onclick="javascript:checkAnswer(27);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-27" value="professor" />
+</div><div id="row-28" class="form-group alert">
+    <label>Word: #28</label>
+    <audio controls>
+    <source id="sound-28" src="https://storage.soundoftext.com/31e4b880-98f3-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-28" class="form-control" />
+    <button type="button" id="button-28" onclick="javascript:checkAnswer(28);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-28" value="teacher" />
+</div><div id="row-29" class="form-group alert">
+    <label>Word: #29</label>
+    <audio controls>
+    <source id="sound-29" src="https://storage.soundoftext.com/c6455d50-974e-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-29" class="form-control" />
+    <button type="button" id="button-29" onclick="javascript:checkAnswer(29);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-29" value="student" />
+</div><div id="row-30" class="form-group alert">
+    <label>Word: #30</label>
+    <audio controls>
+    <source id="sound-30" src="https://storage.soundoftext.com/7259f4f0-9891-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-30" class="form-control" />
+    <button type="button" id="button-30" onclick="javascript:checkAnswer(30);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-30" value="pupil" />
+</div><div id="row-31" class="form-group alert">
+    <label>Word: #31</label>
+    <audio controls>
+    <source id="sound-31" src="https://storage.soundoftext.com/b48e9000-98b0-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-31" class="form-control" />
+    <button type="button" id="button-31" onclick="javascript:checkAnswer(31);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-31" value="reading" />
+</div><div id="row-32" class="form-group alert">
+    <label>Word: #32</label>
+    <audio controls>
+    <source id="sound-32" src="https://storage.soundoftext.com/f421ef00-9a5e-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-32" class="form-control" />
+    <button type="button" id="button-32" onclick="javascript:checkAnswer(32);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-32" value="writing" />
+</div><div id="row-33" class="form-group alert">
+    <label>Word: #33</label>
+    <audio controls>
+    <source id="sound-33" src="https://storage.soundoftext.com/842b2ef0-986a-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-33" class="form-control" />
+    <button type="button" id="button-33" onclick="javascript:checkAnswer(33);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-33" value="twenty" />
+</div><div id="row-34" class="form-group alert">
+    <label>Word: #34</label>
+    <audio controls>
+    <source id="sound-34" src="https://storage.soundoftext.com/bddb8f60-b6b9-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-34" class="form-control" />
+    <button type="button" id="button-34" onclick="javascript:checkAnswer(34);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-34" value="fourty" />
+</div><div id="row-35" class="form-group alert">
+    <label>Word: #35</label>
+    <audio controls>
+    <source id="sound-35" src="https://storage.soundoftext.com/4a601660-99df-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-35" class="form-control" />
+    <button type="button" id="button-35" onclick="javascript:checkAnswer(35);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-35" value="hundred" />
+</div><div id="row-36" class="form-group alert">
+    <label>Word: #36</label>
+    <audio controls>
+    <source id="sound-36" src="https://storage.soundoftext.com/ea744f60-a752-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-36" class="form-control" />
+    <button type="button" id="button-36" onclick="javascript:checkAnswer(36);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-36" value="thousand" />
+</div><div id="row-37" class="form-group alert">
+    <label>Word: #37</label>
+    <audio controls>
+    <source id="sound-37" src="https://storage.soundoftext.com/2f1d1b30-9aef-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-37" class="form-control" />
+    <button type="button" id="button-37" onclick="javascript:checkAnswer(37);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-37" value="million" />
+</div><div id="row-38" class="form-group alert">
+    <label>Word: #38</label>
+    <audio controls>
+    <source id="sound-38" src="https://storage.soundoftext.com/611e6980-982f-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-38" class="form-control" />
+    <button type="button" id="button-38" onclick="javascript:checkAnswer(38);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-38" value="country" />
+</div><div id="row-39" class="form-group alert">
+    <label>Word: #39</label>
+    <audio controls>
+    <source id="sound-39" src="https://storage.soundoftext.com/61be9480-9908-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-39" class="form-control" />
+    <button type="button" id="button-39" onclick="javascript:checkAnswer(39);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-39" value="nationality" />
+</div><div id="row-40" class="form-group alert">
+    <label>Word: #40</label>
+    <audio controls>
+    <source id="sound-40" src="https://storage.soundoftext.com/eae6e460-9a7a-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-40" class="form-control" />
+    <button type="button" id="button-40" onclick="javascript:checkAnswer(40);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-40" value="capital" />
+</div><div id="row-41" class="form-group alert">
+    <label>Word: #41</label>
+    <audio controls>
+    <source id="sound-41" src="https://storage.soundoftext.com/b0b5bdb0-9d05-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-41" class="form-control" />
+    <button type="button" id="button-41" onclick="javascript:checkAnswer(41);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-41" value="neither" />
+</div><div id="row-42" class="form-group alert">
+    <label>Word: #42</label>
+    <audio controls>
+    <source id="sound-42" src="https://storage.soundoftext.com/c62c9660-9818-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-42" class="form-control" />
+    <button type="button" id="button-42" onclick="javascript:checkAnswer(42);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-42" value="nor" />
+</div><div id="row-43" class="form-group alert">
+    <label>Word: #43</label>
+    <audio controls>
+    <source id="sound-43" src="https://storage.soundoftext.com/eaf86580-9946-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-43" class="form-control" />
+    <button type="button" id="button-43" onclick="javascript:checkAnswer(43);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-43" value="first" />
+</div><div id="row-44" class="form-group alert">
+    <label>Word: #44</label>
+    <audio controls>
+    <source id="sound-44" src="https://storage.soundoftext.com/8e1d6f50-9ca6-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-44" class="form-control" />
+    <button type="button" id="button-44" onclick="javascript:checkAnswer(44);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-44" value="fourth" />
+</div><div id="row-45" class="form-group alert">
+    <label>Word: #45</label>
+    <audio controls>
+    <source id="sound-45" src="https://storage.soundoftext.com/40107fc0-9790-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-45" class="form-control" />
+    <button type="button" id="button-45" onclick="javascript:checkAnswer(45);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-45" value="fifth" />
+</div><div id="row-46" class="form-group alert">
+    <label>Word: #46</label>
+    <audio controls>
+    <source id="sound-46" src="https://storage.soundoftext.com/42b211c0-c658-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-46" class="form-control" />
+    <button type="button" id="button-46" onclick="javascript:checkAnswer(46);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-46" value="nineth" />
+</div><div id="row-47" class="form-group alert">
+    <label>Word: #47</label>
+    <audio controls>
+    <source id="sound-47" src="https://storage.soundoftext.com/09248910-9796-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-47" class="form-control" />
+    <button type="button" id="button-47" onclick="javascript:checkAnswer(47);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-47" value="question" />
+</div><div id="row-48" class="form-group alert">
+    <label>Word: #48</label>
+    <audio controls>
+    <source id="sound-48" src="https://storage.soundoftext.com/63446c50-97b7-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-48" class="form-control" />
+    <button type="button" id="button-48" onclick="javascript:checkAnswer(48);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-48" value="answer" />
+</div><div id="row-49" class="form-group alert">
+    <label>Word: #49</label>
+    <audio controls>
+    <source id="sound-49" src="https://storage.soundoftext.com/c6d130f0-996f-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-49" class="form-control" />
+    <button type="button" id="button-49" onclick="javascript:checkAnswer(49);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-49" value="mouth" />
+</div><div id="row-50" class="form-group alert">
+    <label>Word: #50</label>
+    <audio controls>
+    <source id="sound-50" src="https://storage.soundoftext.com/bd643310-97d9-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-50" class="form-control" />
+    <button type="button" id="button-50" onclick="javascript:checkAnswer(50);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-50" value="chin" />
+</div><div id="row-51" class="form-group alert">
+    <label>Word: #51</label>
+    <audio controls>
+    <source id="sound-51" src="https://storage.soundoftext.com/a2d44700-97f3-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-51" class="form-control" />
+    <button type="button" id="button-51" onclick="javascript:checkAnswer(51);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-51" value="forehead" />
+</div><div id="row-52" class="form-group alert">
+    <label>Word: #52</label>
+    <audio controls>
+    <source id="sound-52" src="https://storage.soundoftext.com/41547440-9c2c-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-52" class="form-control" />
+    <button type="button" id="button-52" onclick="javascript:checkAnswer(52);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-52" value="cheek" />
+</div><div id="row-53" class="form-group alert">
+    <label>Word: #53</label>
+    <audio controls>
+    <source id="sound-53" src="https://storage.soundoftext.com/18cff7b0-99f2-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-53" class="form-control" />
+    <button type="button" id="button-53" onclick="javascript:checkAnswer(53);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-53" value="eyebrow" />
+</div><div id="row-54" class="form-group alert">
+    <label>Word: #54</label>
+    <audio controls>
+    <source id="sound-54" src="https://storage.soundoftext.com/d8e59c70-98ae-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-54" class="form-control" />
+    <button type="button" id="button-54" onclick="javascript:checkAnswer(54);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-54" value="right" />
+</div><div id="row-55" class="form-group alert">
+    <label>Word: #55</label>
+    <audio controls>
+    <source id="sound-55" src="https://storage.soundoftext.com/d5713630-98ae-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-55" class="form-control" />
+    <button type="button" id="button-55" onclick="javascript:checkAnswer(55);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-55" value="wrong" />
+</div><div id="row-56" class="form-group alert">
+    <label>Word: #56</label>
+    <audio controls>
+    <source id="sound-56" src="https://storage.soundoftext.com/60a768e0-9b5d-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-56" class="form-control" />
+    <button type="button" id="button-56" onclick="javascript:checkAnswer(56);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-56" value="socks" />
+</div><div id="row-57" class="form-group alert">
+    <label>Word: #57</label>
+    <audio controls>
+    <source id="sound-57" src="https://storage.soundoftext.com/564b27c0-ab88-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-57" class="form-control" />
+    <button type="button" id="button-57" onclick="javascript:checkAnswer(57);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-57" value="stockings" />
+</div><div id="row-58" class="form-group alert">
+    <label>Word: #58</label>
+    <audio controls>
+    <source id="sound-58" src="https://storage.soundoftext.com/b97850a0-988e-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-58" class="form-control" />
+    <button type="button" id="button-58" onclick="javascript:checkAnswer(58);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-58" value="pocket" />
+</div><div id="row-59" class="form-group alert">
+    <label>Word: #59</label>
+    <audio controls>
+    <source id="sound-59" src="https://storage.soundoftext.com/3c1177a0-978e-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-59" class="form-control" />
+    <button type="button" id="button-59" onclick="javascript:checkAnswer(59);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-59" value="handkerchief" />
+</div><div id="row-60" class="form-group alert">
+    <label>Word: #60</label>
+    <audio controls>
+    <source id="sound-60" src="https://storage.soundoftext.com/593a5270-9d24-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-60" class="form-control" />
+    <button type="button" id="button-60" onclick="javascript:checkAnswer(60);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-60" value="sneakers" />
+</div><div id="row-61" class="form-group alert">
+    <label>Word: #61</label>
+    <audio controls>
+    <source id="sound-61" src="https://storage.soundoftext.com/784632a0-9afa-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-61" class="form-control" />
+    <button type="button" id="button-61" onclick="javascript:checkAnswer(61);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-61" value="different" />
+</div><div id="row-62" class="form-group alert">
+    <label>Word: #62</label>
+    <audio controls>
+    <source id="sound-62" src="https://storage.soundoftext.com/f2083e90-9c52-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-62" class="form-control" />
+    <button type="button" id="button-62" onclick="javascript:checkAnswer(62);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-62" value="similar" />
+</div><div id="row-63" class="form-group alert">
+    <label>Word: #63</label>
+    <audio controls>
+    <source id="sound-63" src="https://storage.soundoftext.com/bdecad80-9798-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-63" class="form-control" />
+    <button type="button" id="button-63" onclick="javascript:checkAnswer(63);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-63" value="elbow" />
+</div><div id="row-64" class="form-group alert">
+    <label>Word: #64</label>
+    <audio controls>
+    <source id="sound-64" src="https://storage.soundoftext.com/9bf14b70-9d18-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-64" class="form-control" />
+    <button type="button" id="button-64" onclick="javascript:checkAnswer(64);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-64" value="wrist" />
+</div><div id="row-65" class="form-group alert">
+    <label>Word: #65</label>
+    <audio controls>
+    <source id="sound-65" src="https://storage.soundoftext.com/2861e480-99d5-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-65" class="form-control" />
+    <button type="button" id="button-65" onclick="javascript:checkAnswer(65);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-65" value="thumb" />
+</div><div id="row-66" class="form-group alert">
+    <label>Word: #66</label>
+    <audio controls>
+    <source id="sound-66" src="https://storage.soundoftext.com/d69282b0-9b35-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-66" class="form-control" />
+    <button type="button" id="button-66" onclick="javascript:checkAnswer(66);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-66" value="toes" />
+</div><div id="row-67" class="form-group alert">
+    <label>Word: #67</label>
+    <audio controls>
+    <source id="sound-67" src="https://storage.soundoftext.com/43193b00-a67a-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-67" class="form-control" />
+    <button type="button" id="button-67" onclick="javascript:checkAnswer(67);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-67" value="all" />
+</div><div id="row-68" class="form-group alert">
+    <label>Word: #68</label>
+    <audio controls>
+    <source id="sound-68" src="https://storage.soundoftext.com/2bfccac0-c986-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-68" class="form-control" />
+    <button type="button" id="button-68" onclick="javascript:checkAnswer(68);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-68" value="asking" />
+</div><div id="row-69" class="form-group alert">
+    <label>Word: #69</label>
+    <audio controls>
+    <source id="sound-69" src="https://storage.soundoftext.com/54023b80-99a8-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-69" class="form-control" />
+    <button type="button" id="button-69" onclick="javascript:checkAnswer(69);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-69" value="answering" />
+</div><div id="row-70" class="form-group alert">
+    <label>Word: #70</label>
+    <audio controls>
+    <source id="sound-70" src="https://storage.soundoftext.com/50c70170-985a-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-70" class="form-control" />
+    <button type="button" id="button-70" onclick="javascript:checkAnswer(70);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-70" value="word" />
+</div><div id="row-71" class="form-group alert">
+    <label>Word: #71</label>
+    <audio controls>
+    <source id="sound-71" src="https://storage.soundoftext.com/9621d770-97e4-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-71" class="form-control" />
+    <button type="button" id="button-71" onclick="javascript:checkAnswer(71);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-71" value="meaning" />
+</div><div id="row-72" class="form-group alert">
+    <label>Word: #72</label>
+    <audio controls>
+    <source id="sound-72" src="https://storage.soundoftext.com/6e045af0-ab08-11ec-97ec-87db4a936aff.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-72" class="form-control" />
+    <button type="button" id="button-72" onclick="javascript:checkAnswer(72);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-72" value="needer nor" />
+</div><div id="row-73" class="form-group alert">
+    <label>Word: #73</label>
+    <audio controls>
+    <source id="sound-73" src="https://storage.soundoftext.com/eaf86580-9946-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-73" class="form-control" />
+    <button type="button" id="button-73" onclick="javascript:checkAnswer(73);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-73" value="first" />
+</div><div id="row-74" class="form-group alert">
+    <label>Word: #74</label>
+    <audio controls>
+    <source id="sound-74" src="https://storage.soundoftext.com/8e1d6f50-9ca6-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-74" class="form-control" />
+    <button type="button" id="button-74" onclick="javascript:checkAnswer(74);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-74" value="fourth" />
+</div><div id="row-75" class="form-group alert">
+    <label>Word: #75</label>
+    <audio controls>
+    <source id="sound-75" src="https://storage.soundoftext.com/40107fc0-9790-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-75" class="form-control" />
+    <button type="button" id="button-75" onclick="javascript:checkAnswer(75);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-75" value="fifth" />
+</div><div id="row-76" class="form-group alert">
+    <label>Word: #76</label>
+    <audio controls>
+    <source id="sound-76" src="https://storage.soundoftext.com/42b211c0-c658-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-76" class="form-control" />
+    <button type="button" id="button-76" onclick="javascript:checkAnswer(76);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-76" value="nineth" />
+</div><div id="row-77" class="form-group alert">
+    <label>Word: #77</label>
+    <audio controls>
+    <source id="sound-77" src="https://storage.soundoftext.com/09248910-9796-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-77" class="form-control" />
+    <button type="button" id="button-77" onclick="javascript:checkAnswer(77);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-77" value="question" />
+</div><div id="row-78" class="form-group alert">
+    <label>Word: #78</label>
+    <audio controls>
+    <source id="sound-78" src="https://storage.soundoftext.com/63446c50-97b7-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-78" class="form-control" />
+    <button type="button" id="button-78" onclick="javascript:checkAnswer(78);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-78" value="answer" />
+</div><div id="row-79" class="form-group alert">
+    <label>Word: #79</label>
+    <audio controls>
+    <source id="sound-79" src="https://storage.soundoftext.com/c6d130f0-996f-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-79" class="form-control" />
+    <button type="button" id="button-79" onclick="javascript:checkAnswer(79);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-79" value="mouth" />
+</div><div id="row-80" class="form-group alert">
+    <label>Word: #80</label>
+    <audio controls>
+    <source id="sound-80" src="https://storage.soundoftext.com/bd643310-97d9-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-80" class="form-control" />
+    <button type="button" id="button-80" onclick="javascript:checkAnswer(80);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-80" value="chin" />
+</div><div id="row-81" class="form-group alert">
+    <label>Word: #81</label>
+    <audio controls>
+    <source id="sound-81" src="https://storage.soundoftext.com/a2d44700-97f3-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-81" class="form-control" />
+    <button type="button" id="button-81" onclick="javascript:checkAnswer(81);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-81" value="forehead" />
+</div><div id="row-82" class="form-group alert">
+    <label>Word: #82</label>
+    <audio controls>
+    <source id="sound-82" src="https://storage.soundoftext.com/41547440-9c2c-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-82" class="form-control" />
+    <button type="button" id="button-82" onclick="javascript:checkAnswer(82);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-82" value="cheek" />
+</div><div id="row-83" class="form-group alert">
+    <label>Word: #83</label>
+    <audio controls>
+    <source id="sound-83" src="https://storage.soundoftext.com/18cff7b0-99f2-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-83" class="form-control" />
+    <button type="button" id="button-83" onclick="javascript:checkAnswer(83);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-83" value="eyebrow" />
+</div><div id="row-84" class="form-group alert">
+    <label>Word: #84</label>
+    <audio controls>
+    <source id="sound-84" src="https://storage.soundoftext.com/d8e59c70-98ae-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-84" class="form-control" />
+    <button type="button" id="button-84" onclick="javascript:checkAnswer(84);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-84" value="right" />
+</div><div id="row-85" class="form-group alert">
+    <label>Word: #85</label>
+    <audio controls>
+    <source id="sound-85" src="https://storage.soundoftext.com/d5713630-98ae-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-85" class="form-control" />
+    <button type="button" id="button-85" onclick="javascript:checkAnswer(85);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-85" value="wrong" />
+</div><div id="row-86" class="form-group alert">
+    <label>Word: #86</label>
+    <audio controls>
+    <source id="sound-86" src="https://storage.soundoftext.com/564b27c0-ab88-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-86" class="form-control" />
+    <button type="button" id="button-86" onclick="javascript:checkAnswer(86);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-86" value="stockings" />
+</div><div id="row-87" class="form-group alert">
+    <label>Word: #87</label>
+    <audio controls>
+    <source id="sound-87" src="https://storage.soundoftext.com/b97850a0-988e-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-87" class="form-control" />
+    <button type="button" id="button-87" onclick="javascript:checkAnswer(87);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-87" value="pocket" />
+</div><div id="row-88" class="form-group alert">
+    <label>Word: #88</label>
+    <audio controls>
+    <source id="sound-88" src="https://storage.soundoftext.com/62775ac0-ab08-11ec-97ec-87db4a936aff.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-88" class="form-control" />
+    <button type="button" id="button-88" onclick="javascript:checkAnswer(88);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-88" value="handkertief" />
+</div><div id="row-89" class="form-group alert">
+    <label>Word: #89</label>
+    <audio controls>
+    <source id="sound-89" src="https://storage.soundoftext.com/593a5270-9d24-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-89" class="form-control" />
+    <button type="button" id="button-89" onclick="javascript:checkAnswer(89);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-89" value="sneakers" />
+</div><div id="row-90" class="form-group alert">
+    <label>Word: #90</label>
+    <audio controls>
+    <source id="sound-90" src="https://storage.soundoftext.com/784632a0-9afa-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-90" class="form-control" />
+    <button type="button" id="button-90" onclick="javascript:checkAnswer(90);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-90" value="different" />
+</div><div id="row-91" class="form-group alert">
+    <label>Word: #91</label>
+    <audio controls>
+    <source id="sound-91" src="https://storage.soundoftext.com/f2083e90-9c52-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-91" class="form-control" />
+    <button type="button" id="button-91" onclick="javascript:checkAnswer(91);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-91" value="similar" />
+</div><div id="row-92" class="form-group alert">
+    <label>Word: #92</label>
+    <audio controls>
+    <source id="sound-92" src="https://storage.soundoftext.com/bdecad80-9798-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-92" class="form-control" />
+    <button type="button" id="button-92" onclick="javascript:checkAnswer(92);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-92" value="elbow" />
+</div><div id="row-93" class="form-group alert">
+    <label>Word: #93</label>
+    <audio controls>
+    <source id="sound-93" src="https://storage.soundoftext.com/9bf14b70-9d18-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-93" class="form-control" />
+    <button type="button" id="button-93" onclick="javascript:checkAnswer(93);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-93" value="wrist" />
+</div><div id="row-94" class="form-group alert">
+    <label>Word: #94</label>
+    <audio controls>
+    <source id="sound-94" src="https://storage.soundoftext.com/2861e480-99d5-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-94" class="form-control" />
+    <button type="button" id="button-94" onclick="javascript:checkAnswer(94);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-94" value="thumb" />
+</div><div id="row-95" class="form-group alert">
+    <label>Word: #95</label>
+    <audio controls>
+    <source id="sound-95" src="https://storage.soundoftext.com/6279a4b0-ab08-11ec-97ec-87db4a936aff.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-95" class="form-control" />
+    <button type="button" id="button-95" onclick="javascript:checkAnswer(95);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-95" value="trousersall" />
+</div><div id="row-96" class="form-group alert">
+    <label>Word: #96</label>
+    <audio controls>
+    <source id="sound-96" src="https://storage.soundoftext.com/2bfccac0-c986-11eb-94a3-5f80760f9038.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-96" class="form-control" />
+    <button type="button" id="button-96" onclick="javascript:checkAnswer(96);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-96" value="asking" />
+</div><div id="row-97" class="form-group alert">
+    <label>Word: #97</label>
+    <audio controls>
+    <source id="sound-97" src="https://storage.soundoftext.com/54023b80-99a8-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-97" class="form-control" />
+    <button type="button" id="button-97" onclick="javascript:checkAnswer(97);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-97" value="answering" />
+</div><div id="row-98" class="form-group alert">
+    <label>Word: #98</label>
+    <audio controls>
+    <source id="sound-98" src="https://storage.soundoftext.com/50c70170-985a-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-98" class="form-control" />
+    <button type="button" id="button-98" onclick="javascript:checkAnswer(98);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-98" value="word" />
+</div><div id="row-99" class="form-group alert">
+    <label>Word: #99</label>
+    <audio controls>
+    <source id="sound-99" src="https://storage.soundoftext.com/9621d770-97e4-11eb-b83b-590bb64b106c.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <input type="text" id="write-99" class="form-control" />
+    <button type="button" id="button-99" onclick="javascript:checkAnswer(99);"
+        class="btn btn-success"
+    >Check</button>
+    <input type="hidden" id="answer-99" value="meaning" />
+</div>            
+            
+        </form>
+    </div>
+</body>
+
+</html>
